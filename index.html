@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>雅思词汇系统</title>
+  <title>雅思词汇系统 v2.0</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="app">
-    <h1>雅思词汇查询与例句练习</h1>
-    <input id="searchInput" placeholder="输入单词" />
+    <h1>雅思词汇查询与同义词练习</h1>
+    <input id="searchInput" placeholder="输入词汇" />
     <button onclick="query()">查询</button>
-    <div id="result"></div>
+    <div id="resultBox"></div>
+    <hr>
+    <div id="exerciseArea">
+      <h2>词义选择题</h2>
+      <div id="question"></div>
+      <ul id="options"></ul>
+      <div id="feedback"></div>
+      <button onclick="generateQuestion()">下一题</button>
+    </div>
   </div>
   <script src="vocabDB.js"></script>
   <script src="script.js"></script>
